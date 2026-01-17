@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1",
+    "name": "Modern Minimalist Chair",
+    "description": "A sleek and comfortable chair designed for modern living spaces. Features premium upholstery and solid wood legs.",
+    "price": 199.99,
+    "image": "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=800",
+    "category": "Furniture"
+  },
+  {
+    "id": "2",
+    "name": "Smart Workspace Desk",
+    "description": "Ergonomic desk with built-in wireless charging and cable management. Perfect for your home office setup.",
+    "price": 499,
+    "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&q=80&w=800",
+    "category": "Office"
+  },
+  {
+    "id": "3",
+    "name": "Premium Noise-Cancelling Headphones",
+    "description": "Immersive sound quality with active noise cancellation. Long battery life and comfortable ear cushions.",
+    "price": 299.5,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800",
+    "category": "Electronics"
+  },
+  {
+    "id": "4",
+    "name": "Abstract Canvas Art",
+    "description": "Hand-painted abstract art on high-quality canvas. Adds a touch of elegance and creativity to any room.",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1549887552-93f8efb871b8?auto=format&fit=crop&q=80&w=800",
+    "category": "Decor"
+  },
+  {
+    "id": "5",
+    "name": "Automatic Coffee Maker",
+    "description": "Brew the perfect cup of coffee every morning with this programmable coffee maker. Features a glass carafe and reuseable filter.",
+    "price": 89.99,
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800",
+    "category": "Appliances"
+  },
+  {
+    "id": "6",
+    "name": "Mechanical Gaming Keyboard",
+    "description": "High-performance mechanical keyboard with customizable RGB lighting and tactile switches for the ultimate gaming experience.",
+    "price": 129,
+    "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=800",
+    "category": "Electronics"
+  },
+  {
+    "id": "1768629050274",
+    "name": "Eames Lounge Chair",
+    "description": "Premium quality Eames-style lounge chair made with genuine leather upholstery and solid wooden frame. Designed for maximum comfort and modern interior aesthetics.",
+    "price": 50,
+    "image": "https://images.unsplash.com/photo-1549187774-b4e9b0445b41",
+    "category": "Furniture",
+    "createdAt": "2026-01-17T05:50:50.267Z"
+  }
+]
