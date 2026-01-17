@@ -7,7 +7,7 @@ export default function Home() {
       
       {/* 1. Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        {/* <div className="absolute inset-0 z-0">
            <Image 
              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=2070&auto=format&fit=crop" 
              alt="E-commerce Store" 
@@ -15,7 +15,7 @@ export default function Home() {
              className="object-cover opacity-50"
              priority
            />
-        </div>
+        </div> */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <span className="text-indigo-400 font-semibold tracking-widest uppercase mb-4 block">Welcome to Our Store</span>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
