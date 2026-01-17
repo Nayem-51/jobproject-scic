@@ -157,6 +157,19 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 openssl rand -base64 32
 ```
 
+**Google OAuth Setup** (Required for Google Sign-In):
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select an existing one
+3. Enable the **Google+ API** or **Google Identity API**
+4. Go to **Credentials** → **Create Credentials** → **OAuth 2.0 Client ID**
+5. Set Application type to **Web application**
+6. Add the following **Authorized redirect URIs**:
+   - For development: `http://localhost:3000/api/auth/callback/google`
+   - For production: `https://yourdomain.com/api/auth/callback/google`
+7. Copy the **Client ID** and **Client Secret** to your `.env` file
+
+**Important**: Make sure `NEXTAUTH_URL` in your `.env` matches your application URL (e.g., `http://localhost:3000` for development).
+
 ### Step 3: Run the Application
 
 **Option 1: Run Both Servers Together** (Recommended)

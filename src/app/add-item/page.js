@@ -160,7 +160,10 @@ export default function AddItemPage() {
                             name="name"
                             required
                             placeholder="e.g. Eames Lounge Chair"
-                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
+                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl
+                            text-gray-700
+                            placeholder:text-gray-400
+                            focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
                             value={formData.name}
                             onChange={handleChange}
                         />
@@ -175,7 +178,10 @@ export default function AddItemPage() {
                             min="0"
                             step="0.01"
                             placeholder="0.00"
-                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
+                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl
+                            text-gray-700
+                            placeholder:text-gray-400
+                            focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
                             value={formData.price}
                             onChange={handleChange}
                         />
@@ -186,7 +192,10 @@ export default function AddItemPage() {
                         <div className="relative">
                             <select
                                 name="category"
-                                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition appearance-none"
+                                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl
+                                text-gray-700
+                               placeholder:text-gray-400
+                                focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition appearance-none"
                                 value={formData.category}
                                 onChange={handleChange}
                             >
@@ -208,7 +217,10 @@ export default function AddItemPage() {
                             type="url"
                             name="image"
                             placeholder="https://images.unsplash.com/..."
-                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
+                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl
+                            text-gray-700
+                            placeholder:text-gray-400
+                            focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
                             value={formData.image}
                             onChange={handleChange}
                         />
@@ -242,7 +254,10 @@ export default function AddItemPage() {
                 <textarea
                 name="description"
                 rows={4}
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition resize-none"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl
+                text-gray-700
+                placeholder:text-gray-400
+                focus:bg-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition resize-none"
                 placeholder="Describe the key features and materials..."
                 value={formData.description}
                 onChange={handleChange}
