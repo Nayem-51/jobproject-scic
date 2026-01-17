@@ -21,7 +21,7 @@ export default function LoginPage() {
     if (result.error) {
       setError('Invalid email or password');
     } else {
-      router.push('/items'); // Redirect to items page on success
+      router.push('/admin'); // Redirect to admin dashboard on success
     }
   };
 
@@ -96,7 +96,7 @@ export default function LoginPage() {
           {/* Google Sign-In */}
           <button
             type="button"
-            onClick={() => signIn('google', { callbackUrl: '/items' })}
+            onClick={() => signIn('google', { callbackUrl: '/admin' })}
             className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">

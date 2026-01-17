@@ -21,12 +21,23 @@ export default function Navbar() {
             <Link href="/" className="text-gray-600 hover:text-indigo-600 font-medium transition">Home</Link>
             <Link href="/items" className="text-gray-600 hover:text-indigo-600 font-medium transition">Items</Link>
             {session && (
-              <Link href="/add-item" className="text-gray-600 hover:text-indigo-600 font-medium transition">Add Item</Link>
+              <>
+                <Link href="/admin" className="text-gray-600 hover:text-indigo-600 font-medium transition">Dashboard</Link>
+                <Link href="/add-item" className="text-gray-600 hover:text-indigo-600 font-medium transition">Add Item</Link>
+              </>
             )}
             
             {session ? (
               <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium text-gray-900">{session.user.name}</span>
+                  <Link 
+                    href="/admin"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 font-medium hover:bg-indigo-200 transition"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    {session.user.name || 'Admin'}
+                  </Link>
                   <button 
                     onClick={() => signOut()}
                     className="px-4 py-2 rounded-full bg-gray-100 text-gray-900 font-medium hover:bg-gray-200 transition"
@@ -64,11 +75,23 @@ export default function Navbar() {
             <Link href="/" className="block text-gray-600 hover:text-indigo-600 font-medium">Home</Link>
             <Link href="/items" className="block text-gray-600 hover:text-indigo-600 font-medium">Items</Link>
             {session && (
-              <Link href="/add-item" className="block text-gray-600 hover:text-indigo-600 font-medium">Add Item</Link>
+              <>
+                <Link href="/admin" className="block text-gray-600 hover:text-indigo-600 font-medium">Dashboard</Link>
+                <Link href="/add-item" className="block text-gray-600 hover:text-indigo-600 font-medium">Add Item</Link>
+              </>
             )}
             {session ? (
               <>
-                 <div className="py-2 text-sm text-gray-500">Signed in as {session.user.email}</div>
+                 <Link 
+                   href="/admin"
+                   className="flex items-center gap-2 py-2 text-sm font-medium text-indigo-600 hover:text-indigo-700"
+                 >
+                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                   </svg>
+                   {session.user.name || 'Administrator'}
+                 </Link>
+                 <div className="py-2 text-xs text-gray-500">{session.user.email}</div>
                  <button 
                   onClick={() => signOut()}
                   className="block w-full text-left text-gray-600 hover:text-indigo-600 font-medium"

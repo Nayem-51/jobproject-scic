@@ -63,6 +63,9 @@ export const authOptions = {
       if (user) {
         token.role = user.role || 'user';
         token.provider = account?.provider;
+        token.name = user.name;
+        token.email = user.email;
+        token.image = user.image;
       }
       return token;
     },
@@ -70,6 +73,16 @@ export const authOptions = {
       if (token) {
         session.user.role = token.role;
         session.user.provider = token.provider;
+        // Ensure user name is properly set
+        if (token.name) {
+          session.user.name = token.name;
+        }
+        if (token.email) {
+          session.user.email = token.email;
+        }
+        if (token.image) {
+          session.user.image = token.image;
+        }
       }
       return session;
     },

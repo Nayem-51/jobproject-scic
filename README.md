@@ -77,7 +77,24 @@ A professional, comprehensive homepage with **7 distinct sections**:
 - ✅ **404 Handling** - Proper not-found page for invalid IDs
 - ✅ **Server-side Fetching** - SEO-friendly data loading
 
-### 5. Protected Page: Add Item
+### 5. Administrator Dashboard (Protected)
+- ✅ **Professional Admin Interface** - Comprehensive dashboard for administrators
+- ✅ **Authentication Required** - Only accessible when logged in
+- ✅ **Statistics Overview** - Real-time stats:
+  - Total products count
+  - Total categories count
+  - Quick action buttons
+- ✅ **Admin Profile Display** - Shows administrator name, email, and role
+- ✅ **Recent Products** - Displays latest 5 products with images
+- ✅ **Quick Actions** - Direct links to:
+  - Add new product
+  - View all products
+  - Reports (placeholder)
+  - Settings (placeholder)
+- ✅ **Responsive Design** - Works on all devices
+- ✅ **Auto-redirect** - Redirects to login if not authenticated
+
+### 6. Protected Page: Add Item
 - ✅ **Authentication Required** - Only accessible when logged in
 - ✅ **Form Validation** - Client and server-side validation
 - ✅ **Product Creation** - Saves to MongoDB database (or JSON file if MongoDB not configured)
@@ -93,7 +110,7 @@ A professional, comprehensive homepage with **7 distinct sections**:
 - Image URL (optional, with preview)
 - Description (textarea)
 
-### 6. Express.js Backend API
+### 7. Express.js Backend API
 
 **Endpoints**:
 
@@ -204,6 +221,7 @@ npm run server
 | `/login` | Public | Login page (Credentials & Google OAuth) | ❌ |
 | `/items` | Public | Product listing page | ❌ |
 | `/items/[id]` | Public | Individual product details | ❌ |
+| `/admin` | Protected | Administrator dashboard | ✅ |
 | `/add-item` | Protected | Form to add new products | ✅ |
 
 ---
@@ -215,7 +233,8 @@ npm run server
 2. If unauthenticated → Redirect to `/login`
 3. User submits credentials → Validated via Express API
 4. NextAuth creates JWT session → Stored in HTTP-only cookie
-5. User redirected to intended page
+5. User redirected to `/admin` dashboard (or intended page)
+6. Administrator name and role displayed in navbar and dashboard
 
 ### Data Flow
 ```
