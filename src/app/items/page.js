@@ -5,6 +5,7 @@ export const metadata = {
   description: 'Browse our premium collection of products. Quality items with fast shipping and secure checkout.',
 };
 
+export const dynamic = "force-dynamic";
 async function getItems() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
   
@@ -12,7 +13,7 @@ async function getItems() {
     const res = await fetch(`${apiUrl}/items`, { 
       // No cache for development - always fetch fresh data
       cache: 'no-store',
-      next: { revalidate: 0 }
+      // next: { revalidate: 0 }
     });
     
     if (!res.ok) {
